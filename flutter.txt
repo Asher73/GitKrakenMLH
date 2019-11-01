@@ -1,0 +1,172 @@
+void main() {
+  print("Hola Mundo");
+  String nombre = "Asher";
+  int edad = 21;
+  double estatura = 1.83;
+  
+  List<String> lista = ["Asher", "Nito", "Omar Jotolon", "Reyni"];
+  
+  lista.add("Nuevo");
+  
+  var mapa = [];
+  
+}
+
+
+-------------------------------------------------------
+
+void main() {
+ for (int i = 0; i< 10; i++){
+   print("$i");
+   print("${i}");
+ }
+  
+  while(true){
+    
+  }
+  int x = 1;
+  switch(x){
+    case 1: print("Equis 1"); break;
+    case 2: print("Equis 2"); break;
+    case 3: print("Equis 3"); break;
+    case 4: print("Equis 4"); break;
+  }
+  
+  if (x > 10){
+    //codigo
+  }else{
+    //codigo
+  }
+}
+
+---------------------------------------------------
+
+void main() {
+  var cachito = new Persona("Cachito", 21, true);
+  
+  cachito.datos();
+  cachito.saludar("Omar Joto");
+  cachito.saludar2(nombre2: "Juanitooo", edad: 21);
+  cachito.saludar3("Cachito", "21 años");
+}
+
+class Persona{
+  String nombre;
+  int edad;
+  bool sexo;
+  
+  Persona(String nombre, int edad, bool sexo){
+    this.nombre = nombre;
+    this.edad = edad;
+    this.sexo = sexo;
+  }
+  
+ datos(){
+   print("Nombre: $nombre");
+ }
+  
+  saludar(String nombre){
+    print("Hola $nombre");
+  }
+  
+  saludar2({String nombre2, int edad}){
+    print("Hola joder $nombre2, Edad: $edad");
+  }
+  
+  saludar3(String nobmre, [String edad]){
+    print("Hello $nombre, $edad");
+  }
+}
+
+class Policia extends Persona{
+    int experiencia;
+    Policia(String nom, int edad, bool sexo, this.experiencia) : super(nom, edad, sexo);
+  }
+
+_____________________________________________________________
+
+main.dart 1
+import 'package:flutter/material.dart';
+ 
+void main() => runApp(MyApp());
+ 
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int x = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      theme: ThemeData(
+        primaryColor: Colors.red
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Primera Pinshi App del Asher'),
+        ),
+        body: Column(
+          children: <Widget>[
+            Center(
+              child: MaterialButton(
+                elevation: 12,
+                color: Colors.blueGrey,
+                child: Text("Aceptar", style: TextStyle(color: Colors.white, fontSize: 22),),
+              onPressed: (){
+                setState(() {
+                 x++; 
+                });
+              },
+              ),
+            ),
+            RaisedButton(
+              elevation: 12,
+              color: Colors.blueGrey,
+                child: Text("Yei", style: TextStyle(color: Colors.white, fontSize: 22),),
+              onPressed: (){
+                print("Hola");
+              },
+            ),
+            TextField(
+              decoration: InputDecoration(
+                icon: Icon(Icons.whatshot),
+                labelText: "Hola"
+              ),
+            ),
+            SizedBox(height: 25,),
+            Text("Clicks $x")
+          ],
+          )
+          
+          
+        ),
+    
+    );
+  }
+}
+
+
+Tema
+teclado
+
+_____________________________________________________________________________
+Auditorias
+-Entrevista a directivos-
+
+Estas entrevistas se deben realizar directamente al
+departamaento al cual se va a auditar. Es recomendado que
+sean realizadas de frente a frente de forma directa con el personal
+auditado, que simplemente enviar test por medios electronicos de 
+comunicaciones (correo, whatsapp, etc.).
+
+El contenido de las preguntas no debe ser inducidas, es decir, evitar ambigüedad
+y ser lo mas claras posibles.
+
+-Evaluacion en el marco juridico de la auditoria-
+
+Determinar si se lograron los objetivos previamente establecidos en el
+plan de auditoria.
